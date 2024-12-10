@@ -1,0 +1,110 @@
+/* Основные стили для body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+}
+
+/* Стили для header */
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Основные стили для main */
+main {
+  flex-grow: 1;
+  padding: 1rem;
+  padding-bottom: 5rem;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Стили для контейнера таблицы */
+#summary-table,
+#details-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Стили для таблицы */
+table {
+  width: 100%;              /* Заполняем всю ширину контейнера */
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-sizing: border-box;   /* Учитываем padding и border в ширине */
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  th, td {
+    padding: 0.3rem;
+    font-size: 12px; /* Уменьшаем размер шрифта для мобильных устройств */
+  }
+
+  /* Уменьшаем размер заголовка */
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  /* Убираем фиксированный footer для избежания перекрытия */
+  footer {
+    position: relative;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  /* Предотвращаем горизонтальную прокрутку для таблиц */
+  #summary-table,
+  #details-table {
+    width: 100%;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку для таблиц, если нужно */
+  }
+
+  table {
+    min-width: 100%; /* Устанавливаем минимальную ширину таблицы равной ширине контейнера */
+  }
+}
+
+/* Стили для footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #343a40;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
